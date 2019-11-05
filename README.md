@@ -1,8 +1,8 @@
-#Tic-Tac-Toe
+# Tic-Tac-Toe
 
 Assignment from the Odin Project
 
-#Learning outcomes
+# Learning outcomes
 * Factory functions
 * The module pattern (wrap a factory function in a IIFE)
 * Encapsulation
