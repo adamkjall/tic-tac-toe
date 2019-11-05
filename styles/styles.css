@@ -1,0 +1,56 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.squares {
+  width: 24rem;
+  height: 24rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center center;
+
+  background: rgb(211, 53, 53);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.square:hover {
+  filter: brightness(120%);
+}
+
+.square-1, .square-2, .square-3,
+.square-4, .square-5, .square-6 {
+  border-bottom: 0.5rem solid black;
+}
+
+.square-1, .square-4, .square-7,
+.square-2, .square-5, .square-8 {
+  border-right: 0.5rem solid black;
+}
+
