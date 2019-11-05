@@ -71,8 +71,8 @@ function Player(name, mark) {
 
 function markCell(e) {
   const index = e.target.dataset.index;
-
   const cellWasEmpy = Gameboard.setCell(index, currentPlayer.getMark());
+  
   if (cellWasEmpy) {
     updateGame();
   }
@@ -92,8 +92,7 @@ function updateGame() {
   } else if (Gameboard.isDraw()) {
     messageElement.innerText = "It's a draw!";
     disableListeners();
-  }
-   else {
+  } else {
     currentPlayer = currentPlayer === player1 ? player2 : player1;
     messageElement.innerText = currentPlayer.getName() + "'s turn.";
   }
