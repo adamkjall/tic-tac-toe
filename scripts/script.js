@@ -44,7 +44,7 @@ const Gameboard = (() => {
   };
   const reset = () => (board = board.map(cell => ""));
   const hasWinner = () =>
-    winningCombos.some(
+    winningCombos.find(
       combo =>
         board[combo[0]] !== "" &&
         board[combo[0]] === board[combo[1]] &&
@@ -85,7 +85,12 @@ function updateGame() {
     square.innerHTML = board[i];
   });
 
-  if (Gameboard.hasWinner()) {
+  const winningCombo = Gameboard.hasWinner();
+  if (winningCombo) {
+    const squareArray = Array.from(squareElements);
+    
+    winningCombo.forEach(index => squareArray[index].style.color = "#bada55");
+    
     messageElement.innerText = currentPlayer.getName() + " won the game!";
     currentPlayer.incrementScore();
     disableListeners();
