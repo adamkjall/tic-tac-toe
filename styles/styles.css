@@ -54,3 +54,25 @@ h1 {
   border-right: 0.5rem solid black;
 }
 
+
+button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s cubic-bezier(0.25, 0.4, 0.4, 2),
+    filter 0.2s ease;
+}
+
+button:hover {
+  box-shadow: 0px 25px 15px -15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  filter: brightness(140%);
+}
+
